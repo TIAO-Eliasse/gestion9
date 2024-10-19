@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import calendar
 from datetime import datetime, timedelta
-st.title("Programmme de paiment de facture et de netoyage de la cité")
+st.title("Programmme de paiment de facture et de nettoyage de la cité")
 
 st.markdown("""
     <style>
@@ -20,7 +20,7 @@ st.markdown("""
 
 
 #precision_netoyage=st.selectbox("Voulez vous consulter le programme de netoyage des toilettes ou des blocs",["toilettes", "blocs"])
-if st.button("* Consultez le Programme de netoyage des couloirs entre le mois d'Octobre 2024 et Juillet 2025* "):
+if st.button("* Consultez le Programme de nettoyage des couloirs entre le mois d'Octobre 2024 et Juillet 2025* "):
     st.switch_page("pages/4_Couloirs.py")
 
        
