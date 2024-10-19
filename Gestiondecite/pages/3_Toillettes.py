@@ -15,17 +15,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-#choix_bloc_Toilettes=st.selectbox("Voir le programme de netoyage des toillettes du bloc: ",["bloc A","bloc B"])
+#choix_bloc_Toilettes=st.selectbox("Voir le programme de nettoyage des toillettes du bloc: ",["bloc A","bloc B"])
 # Initialiser l'état de session
 
 #if 'selected_person' not in st.session_state:
     #st.session_state['selected_person'] = None
 
 # Membres du Bloc A
-membres_blocA = ["TIAO Eliasse", "SOME Pascal", "SOME Kpargnin", "Dah", "KONE Ajouba", "David"]
+membres_blocA = [ "David","TIAO Eliasse", "Dah","NATAMA Junior]
 
 # Définir les dates de début et de fin
-start_date = datetime.date(2024, 10, 4)
+start_date = datetime.date(2024, 10, 19)
 end_date = datetime.date(2025, 7, 30)
 
 # Initialiser une liste pour stocker les dimanches
@@ -43,7 +43,7 @@ sundays_count = {}
 i = 0
 for elt in sundays:
     sundays_count[elt] = membres_blocA[i]
-    if i < 5:
+    if i < 3:
         i += 1
     else:
         i = 0
@@ -52,7 +52,7 @@ if 'show_weekends' not in st.session_state:
 def taggle_text():
        st.session_state.show_weekends = not st.session_state.show_weekends 
 
-if st.button("Le Programme de netoyage des toillettes du Bloc A"):
+if st.button("Le Programme de nettoyage des toillettes du Bloc A"):
     taggle_text()
 if st.session_state.show_weekends:
         
@@ -69,11 +69,11 @@ if st.session_state.show_weekends:
 
 
 
-membres_blocA=["TIAO Eliasse","SOME Pascal","SOME Kpargnin","Dah","KONE Ajouba","David"]
+membres_blocB=["BAMOGO Karim","SEBEGO Stephane","KABRE Oumarou","OUEDRAOGO Abdoul Faiçal","KABORE Azaria"]
 import datetime
 
             # Définir les dates de début et de fin
-start_date = datetime.date(2024, 10, 4)
+start_date = datetime.date(2024, 10, 22)
 end_date = datetime.date(2025, 7, 30)
 
             # Initialiser une liste pour stocker les dimanches
@@ -89,7 +89,7 @@ sundays_count={}
 i=0
 for elt in sundays:
                 sundays_count[elt]=membres_blocA[i]
-                if i<5:
+                if i<4:
                     i=i+1
                 else:
                     i=0
@@ -98,17 +98,17 @@ if 'show_weekends2' not in st.session_state:
 def taggle_text2():
        st.session_state.show_weekends2 = not st.session_state.show_weekends2
 
-if st.button("Le Programme de netoyage des toillettes du Bloc B"):
+if st.button("Le Programme de nettoyage des toillettes du Bloc B"):
     taggle_text2()
 if st.session_state.show_weekends2:
     #st.session_state['show_selectbox'] = True
-    Netoyage_personne_specifie=st.selectbox("**Voir le programme de netoyage des toilletes de :**", membres_blocA)
+    Netoyage_personne_specifie=st.selectbox("**Voir le programme de nettoyage des toilletes de :**", membres_blocA)
     #if Netoyage_personne_specifie:
         #st.session_state['selected_person'] = Netoyage_personne_specifie
     #if st.session_state['selected_person']:
-                            #st.button("Le Programme de netoyage des toillettes du Bloc B")==True
+                            #st.button("Le Programme de nettoyage des toillettes du Bloc B")==True
     programme_netoyage=[cle for cle, valeur in sundays_count.items() if valeur == Netoyage_personne_specifie]
-    st.write(pd.DataFrame(programme_netoyage, columns=["Programme de netoyage de "+ Netoyage_personne_specifie]))
+    st.write(pd.DataFrame(programme_netoyage, columns=["Programme de nettoyage de "+ Netoyage_personne_specifie]))
     
 
 
