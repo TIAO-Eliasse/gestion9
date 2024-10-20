@@ -26,11 +26,11 @@ st.markdown("""
 
 # Utiliser la classe CSS dans votre application
 st.markdown('<p class="big-font">Bienvenue dans application GESTION DE LA CITE!</p>', unsafe_allow_html=True)
-st.write("Cette application donne le programme de Nétoyage de la cité et des paiements de factures ")
-if st.button("Consultez le Programme de Nétoyage de la cité"):
+st.write("Cette application donne le programme de nettoyage de la cité et des paiements de factures ")
+if st.button("Consultez le Programme de nettoyage de la cité"):
     st.switch_page("pages/2_Propreté.py")
 if st.button("Consultez le Programme de paiement des factures"):
     st.switch_page("pages/1_Facture.py")
 
-if st.button('Quitter l\'application'):
-    st.stop()
+#if st.button('Quitter l\'application'):
+ #   st.stop()
