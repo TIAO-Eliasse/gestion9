@@ -51,7 +51,7 @@ dernier_weekend=[ ]
 for saturday, sunday in weekends:
         dernier_weekend.append(f"Samedi: {saturday.strftime('%Y-%m-%d')}, Dimanche: {sunday.strftime('%Y-%m-%d')}")
 
-#precision_netoyage=st.selectbox("Voulez vous consulter le programme de netoyage des toilettes ou des blocs",["toilettes", "blocs"])
+#precision_netoyage=st.selectbox("Voulez vous consulter le programme de nettoyage des toilettes ou des blocs",["toilettes", "blocs"])
 
 
 
@@ -80,26 +80,26 @@ for i in range(1, taille):
                 Equipe1_jour.append(dernier_weekend[i])
             else:
                 Equipe2_jour.append(dernier_weekend[i])
-st.title("***Programme de Nétoyage des équipes***")
-if st.button("Programme de Nétoyage des équipes 1 des deux blocs"):
-            st.write(" Les weekend de Nétoyage des Equipes 1 des deux blocs sont:")
+st.title("***Programme de néttoyage des équipes***")
+if st.button("Programme de néttoyage des équipes 1 des deux blocs"):
+            st.write(" Les weekend de nettoyage des Equipes 1 des deux blocs sont:")
             st.write(pd.DataFrame(Equipe1_jour, columns=["Weekend       "]))
 if st.button("Programme de Nétoyage des équipe 2 des deux blocs"):
-            st.write(" Les weekend de Ne2oyage des Equipe 2 des deux blocs sont:")
+            st.write(" Les weekend de nettoyage des Equipe 2 des deux blocs sont:")
             st.write(pd.DataFrame(Equipe2_jour, columns=["Weekend         "]))
 
 
-choix_weekend=st.selectbox("Choisissez un weekend de netoyage et voir les membres chargés du nétoyage",dernier_weekend) 
+choix_weekend=st.selectbox("Choisissez un weekend de netoyage et voir les membres chargés du nettoyage",dernier_weekend) 
 if choix_weekend in Equipe1_jour:
-            st.write("Les équipes de netoyage pour " +" "+ "le" + " " + choix_weekend + " sont les équipes 1 des deux blocs ")
-            EquipeA=["SOME Pascal", "TIAO ELiasse", "DAH Fongnemen"," Bonkoungou Emmanuel"]
+            st.write("Les équipes de nettoyage pour " +" "+ "le" + " " + choix_weekend + " sont les équipes 1 des deux blocs ")
+            EquipeA=["SOME Pascal", "TIAO ELiasse", "DAH Fongnemen"," Bonkoungou Emmanuel","NATAMA Junior"]
             EquipeB=["BAMOGO Karim","OUOBA Abel", "KABORE Azaria"]
             st.write(" L'équipe 1 du bloc A est constituée de : ")
             st.write(pd.DataFrame(EquipeA,columns=["Nom et prenom            "]))
             st.write(" L'équipe 1 du bloc B est constituée de : ")
             st.write(pd.DataFrame(EquipeB,columns=["Nom et prenom              "]))
 else:
-            st.write("Les équipes de netoyage pour " +" "+ "le" + " " + choix_weekend + " sont les équipes 2 des deux blocs ")
+            st.write("Les équipes de nettoyage pour " +" "+ "le" + " " + choix_weekend + " sont les équipes 2 des deux blocs ")
             EquipeA=["KONE Ayouba","NIKIEMA David", "SOME Renaud", "BANHORO Donald"]
             EquipeB=["SEBEGO Stephane","NITIEMA Joris"]
             st.write(" L'équipe 2 du bloc A est constituée de : ")
