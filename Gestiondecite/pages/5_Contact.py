@@ -18,5 +18,5 @@ st.markdown("""
 if st.button("Page d'Accueil"): 
     st.switch_page("Page_d'Accueil.py")
 
-if st.button('Quitter l\'application'):
-    st.stop()
+#if st.button('Quitter l\'application'):
+    #st.stop()
